@@ -1,0 +1,12 @@
+[package]
+name = "shaders"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["dylib", "lib"]
+
+[dependencies]
+
+[target.'cfg(target_arch = "spirv")'.dependencies]
+spirv-std = { path = "../../../../.build/rust-gpu/crates/spirv-std", features = ["glam"] }

@@ -1,0 +1,11 @@
+[build]
+target = "spirv-unknown-vulkan1.2"
+rustflags = [
+    "-Zcodegen-backend=/home/kyrime/.build/rust-gpu/target/release/librustc_codegen_spirv.so",
+    "-Csymbol-mangling-version=v0",
+	"-Ctarget-feature=+StorageImageExtendedFormats",
+]
+
+[unstable]
+build-std=["core"]
+build-std-features=["compiler-builtins-mem"]
